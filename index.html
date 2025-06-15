@@ -17,8 +17,8 @@
       color: #222;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
     }
     .container {
       max-width: 850px;
@@ -54,24 +54,70 @@
       align-items: center;
       margin-bottom: 36px;
     }
-    .profile img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #1976d2;
-      object-fit: cover;
-      filter: brightness(1.1);
-      margin-bottom: 16px;
-      transition: transform 0.3s ease;
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 14px;
+      position: relative;
+      width: 160px;
+      height: 160px;
     }
-    .profile img:hover {
-      transform: scale(1.1);
+    .profile-pic-container a {
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 0 0 #1976d2;
+      transition: box-shadow 0.4s;
+    }
+    .profile-pic-container a::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      z-index: 1;
+      pointer-events: none;
+      box-shadow: 0 0 32px 8px #1976d2, 0 0 64px 16px #90caf9;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .profile-pic-container a:hover::before {
+      opacity: 1;
+      animation: glow 1.2s infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 16px 2px #1976d2, 0 0 32px 4px #90caf9;
+      }
+      to {
+        box-shadow: 0 0 32px 8px #1976d2, 0 0 64px 16px #90caf9;
+      }
+    }
+    .profile-pic-container img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      object-position: 50% 30%;
+      border-radius: 50%;
+      border: 4px solid #1976d2;
+      background: #fff;
+      transition: transform 0.35s;
+      z-index: 2;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .profile-pic-container a:hover img {
+      transform: scale(1.07);
     }
     .profile h2 {
       margin: 0;
       font-size: 2rem;
       color: #1976d2;
       font-weight: 700;
+      text-align: center;
     }
     .skills, .projects, .contact {
       text-align: center;
@@ -132,7 +178,7 @@
     @media (max-width: 600px) {
       .container { padding: 20px 6px; }
       .hero { padding: 30px 10px; }
-      .profile img { width: 100px; height: 100px; }
+      .profile-pic-container, .profile-pic-container a, .profile-pic-container img { width: 100px; height: 100px;}
       .contact-icons a { width: 44px; height: 44px; font-size: 1.1rem; }
     }
   </style>
@@ -144,7 +190,11 @@
       <p>Transforming data into actionable insights with modern data engineering solutions.</p>
     </div>
     <div class="profile">
-      <img src="https://github.com/a7medgohary/a7medgohary.github.io/blob/main/prof_photo.jpeg?raw=true" alt="Ahmed Elgohary Photo">
+      <div class="profile-pic-container">
+        <a href="https://github.com/a7medgohary" target="_blank" title="GitHub">
+          <img src="https://github.com/a7medgohary/a7medgohary.github.io/blob/main/prof_photo.jpeg?raw=true" alt="Ahmed Elgohary">
+        </a>
+      </div>
       <h2>Ahmed Elgohary</h2>
     </div>
     <div class="skills">
