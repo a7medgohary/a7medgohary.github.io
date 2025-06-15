@@ -100,6 +100,25 @@
       margin-left: auto;
       margin-right: auto;
     }
+    /* ABOUT ME SECTION */
+    .about-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .about-section h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .about-section p {
+      font-size: 1.08rem;
+      color: #444;
+      text-align: center;
+      margin-bottom: 0;
+    }
     /* SKILLS SECTION */
     .skills-section {
       padding: 36px 30px 0 30px;
@@ -144,6 +163,12 @@
       color: var(--primary);
       margin-bottom: 6px;
     }
+    .skill-name a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
     .progress-bar {
       width: 80px;
       height: 7px;
@@ -161,6 +186,46 @@
     @keyframes growBar {
       from { width: 0;}
       to { width: var(--width);}
+    }
+    /* EXPERIENCE SECTION */
+    .experience-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .experience-section h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .job {
+      margin-bottom: 18px;
+      background: #f3f8fd;
+      border-radius: 10px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 12px rgba(25,118,210,0.05);
+    }
+    .job-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.08rem;
+    }
+    .job-company {
+      font-weight: 500;
+      color: #444;
+      font-size: 1.02rem;
+    }
+    .job-date {
+      color: #888;
+      font-size: 0.97rem;
+      margin-bottom: 6px;
+    }
+    .job-desc {
+      font-size: 0.99rem;
+      color: #444;
+      margin-top: 6px;
     }
     /* PROJECT SECTION */
     .projects-section {
@@ -231,6 +296,45 @@
       background: #0d47a1;
       box-shadow: 0 4px 16px rgba(25,118,210,0.18);
     }
+    /* CERTIFICATIONS SECTION */
+    .cert-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .cert-section h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .cert-list li {
+      background: #f3f8fd;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      color: #1976d2;
+      box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cert-list a {
+      color: #1976d2;
+      text-decoration: underline;
+      font-weight: 600;
+    }
     /* CONTACT SECTION */
     .contact-section {
       text-align: center;
@@ -291,14 +395,14 @@
     /* RESPONSIVE */
     @media (max-width: 700px) {
       .container { padding: 0 0 24px 0; }
-      .skills-section, .projects-section { padding: 24px 6px 0 6px; }
+      .skills-section, .projects-section, .about-section, .experience-section, .cert-section { padding: 24px 6px 0 6px; }
       .project-card { flex-direction: column; align-items: flex-start; gap: 14px; padding: 16px 10px;}
       .project-thumb { margin-bottom: 10px;}
     }
     @media (max-width: 500px) {
       .hero { padding: 30px 4px 22px 4px;}
       .profile-pic-container, .profile-pic-container img { width: 100px; height: 100px;}
-      .skills-section, .projects-section { padding: 12px 2px 0 2px; }
+      .skills-section, .projects-section, .about-section, .experience-section, .cert-section { padding: 12px 2px 0 2px; }
       .contact-icons a { width: 40px; height: 40px; font-size: 1.1rem; padding: 8px 10px;}
     }
   </style>
@@ -313,6 +417,13 @@
       <h1>Ahmed Elgohary</h1>
       <h2>Data Engineer</h2>
       <p>Transforming data into actionable insights with modern data engineering solutions. Passionate about building scalable data pipelines and delivering business value through analytics.</p>
+    </div>
+    <!-- ABOUT ME SECTION -->
+    <div class="about-section">
+      <h3>About Me</h3>
+      <p>
+        Detail-oriented Data Engineer with hands-on experience in building data pipelines, developing ETL workflows, and integrating data across cloud and on-premise systems. Proficient in Python, SQL, Spark, DBT, and Power BI, with a solid understanding of data modeling, data validation, and data warehousing principles. Familiar with cloud technologies, including Azure, Redshift, and IBM Cloud. Passionate about solving data challenges and enabling analytics through clean, reliable, and scalable data solutions.
+      </p>
     </div>
     <!-- SKILLS SECTION -->
     <div class="skills-section">
@@ -335,7 +446,9 @@
         </div>
         <div class="skill-card">
           <i class="fas fa-cogs"></i>
-          <span class="skill-name">DBT</span>
+          <span class="skill-name">
+            <a href="https://www.udemy.com/certificate/UC-f12990ad-8a3f-4416-b642-290b26a189e8/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank" title="DBT Certificate">DBT</a>
+          </span>
           <div class="progress-bar"><div class="progress" style="width:82%; --width:82%;"></div></div>
         </div>
         <div class="skill-card">
@@ -344,9 +457,43 @@
           <div class="progress-bar"><div class="progress" style="width:75%; --width:75%;"></div></div>
         </div>
         <div class="skill-card">
+          <i class="fas fa-bolt"></i>
+          <span class="skill-name">
+            <a href="https://www.udemy.com/certificate/UC-43ad3d4b-fff1-4fbd-88bd-78a6ec4c585e/" target="_blank" title="Apache Spark Certificate">Apache Spark</a>
+          </span>
+          <div class="progress-bar"><div class="progress" style="width:80%; --width:80%;"></div></div>
+        </div>
+        <div class="skill-card">
           <i class="fas fa-chart-bar"></i>
           <span class="skill-name">Power BI</span>
           <div class="progress-bar"><div class="progress" style="width:85%; --width:85%;"></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- EXPERIENCE SECTION -->
+    <div class="experience-section">
+      <h3>Experience</h3>
+      <div class="job">
+        <div class="job-title">Data Engineer</div>
+        <div class="job-company">Arrow Electronics (Nasr-city)</div>
+        <div class="job-date">Jan 2024 – Present</div>
+        <div class="job-desc">
+          Design, implement, and manage data solutions on the Microsoft Azure cloud platform using Python and Spark.<br>
+          Create and maintain data pipelines, data storage solutions, data processing, and data integration using Azure Data Factory, Python.<br>
+          Integrated data from Azure Data Platform (Data Lake, Azure SQL, Data Factory) to optimize BI reporting.<br>
+          Work with functional teams to understand the data requirements and provide data solutions that enable data-driven decision-making.<br>
+          <b>Tools:</b> Oracle, DBT, Spark, Azure Data Factory, Python, Power BI
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-title">Business Intelligence Engineer</div>
+        <div class="job-company">Sandoz Egypt</div>
+        <div class="job-date">Sep 2023 – Jan 2024</div>
+        <div class="job-desc">
+          Developed and created interactive Power BI dashboards to provide insights into business operations.<br>
+          Built and maintained ETL pipelines to consolidate and clean data, ensuring data quality.<br>
+          Provided support and training to users and other teams.<br>
+          <b>Tools:</b> Power BI, Python, Azure SQL Database
         </div>
       </div>
     </div>
@@ -363,6 +510,46 @@
           <a class="project-link" href="https://github.com/a7medgohary/restaurant_data_pipeline" target="_blank">View on GitHub</a>
         </div>
       </div>
+      <div class="project-card">
+        <img class="project-thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=300&q=80" alt="HR Data Pipeline">
+        <div class="project-info">
+          <div class="project-title">HR Data Pipeline</div>
+          <div class="project-desc">
+            Automated HR analytics pipeline to collect, transform, and load performance data from multiple sources into Oracle using Python and DBT, and designed a Power BI dashboard to track employee performance and engagement.
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-thumb" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80" alt="Examination System for ITI">
+        <div class="project-info">
+          <div class="project-title">Examination System for ITI</div>
+          <div class="project-desc">
+            Designed a database to store and manage exam data efficiently and used SSIS to automate data extraction, transformation, and loading into a reporting database and visualization through Power BI.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CERTIFICATIONS SECTION -->
+    <div class="cert-section">
+      <h3>Certifications</h3>
+      <ul class="cert-list">
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.udemy.com/certificate/UC-f12990ad-8a3f-4416-b642-290b26a189e8/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank">DBT (Data Build Tool)</a>
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.udemy.com/certificate/UC-43ad3d4b-fff1-4fbd-88bd-78a6ec4c585e/" target="_blank">Apache Spark</a>
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          Data Engineering Foundations
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          Data Warehousing Concepts
+        </li>
+      </ul>
     </div>
     <!-- CONTACT SECTION -->
     <div class="contact-section">
