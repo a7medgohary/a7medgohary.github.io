@@ -118,6 +118,8 @@
       font-weight: 500;
       font-size: 1.1rem;
     }
+
+    /* Contact Icons Animation and Shadow */
     .contact-icons {
       display: flex;
       gap: 22px;
@@ -134,14 +136,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(25,118,210,0.10);
       width: 48px;
       height: 48px;
+      box-shadow: 0 6px 32px 0 rgba(25, 118, 210, 0.30), 0 2px 8px rgba(25,118,210,0.10);
+      animation: pulse 1.2s cubic-bezier(.4,0,.2,1);
+      animation-iteration-count: 1;
+      transition: 
+        background 0.2s, 
+        box-shadow 0.3s, 
+        transform 0.3s;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.40), 0 2px 8px rgba(25,118,210,0.10);
+        transform: scale(1);
+      }
+      60% {
+        box-shadow: 0 0 0 20px rgba(25, 118, 210, 0.10), 0 6px 32px 0 rgba(25, 118, 210, 0.30);
+        transform: scale(1.15);
+      }
+      100% {
+        box-shadow: 0 6px 32px 0 rgba(25, 118, 210, 0.30), 0 2px 8px rgba(25,118,210,0.10);
+        transform: scale(1);
+      }
     }
     .contact-icons a:hover {
       background: #0d47a1;
-      box-shadow: 0 4px 16px rgba(25,118,210,0.18);
+      box-shadow: 0 12px 40px 0 rgba(25, 118, 210, 0.40), 0 2px 16px rgba(25,118,210,0.18);
+      transform: scale(1.18) rotate(-3deg);
     }
     @media (max-width: 600px) {
       .container { padding: 20px 6px; }
