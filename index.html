@@ -39,7 +39,6 @@
       from { opacity: 0; transform: translateY(30px);}
       to { opacity: 1; transform: translateY(0);}
     }
-    /* HERO SECTION */
     .hero {
       background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 100%);
       color: var(--white);
@@ -99,7 +98,24 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* SKILLS SECTION */
+    .about-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .about-section h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .about-section p {
+      font-size: 1.08rem;
+      color: #444;
+      text-align: center;
+      margin-bottom: 0;
+    }
     .skills-section {
       padding: 36px 30px 0 30px;
     }
@@ -142,11 +158,11 @@
       font-weight: 600;
       color: var(--primary);
       margin-bottom: 6px;
-      text-align: center;
     }
     .skill-name a {
       color: var(--primary);
       text-decoration: underline;
+      font-size: 1.05rem;
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -171,7 +187,45 @@
       from { width: 0;}
       to { width: var(--width);}
     }
-    /* PROJECT SECTION */
+    .experience-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .experience-section h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .job {
+      margin-bottom: 18px;
+      background: #f3f8fd;
+      border-radius: 10px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 12px rgba(25,118,210,0.05);
+    }
+    .job-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.08rem;
+    }
+    .job-company {
+      font-weight: 500;
+      color: #444;
+      font-size: 1.02rem;
+    }
+    .job-date {
+      color: #888;
+      font-size: 0.97rem;
+      margin-bottom: 6px;
+    }
+    .job-desc {
+      font-size: 0.99rem;
+      color: #444;
+      margin-top: 6px;
+    }
     .projects-section {
       padding: 0 30px 0 30px;
     }
@@ -240,54 +294,44 @@
       background: #0d47a1;
       box-shadow: 0 4px 16px rgba(25,118,210,0.18);
     }
-    /* EXPERIENCE & EDUCATION SECTION */
-    .two-columns {
-      display: flex;
-      gap: 32px;
-      justify-content: space-between;
-      margin: 40px 30px 0 30px;
-      flex-wrap: wrap;
+    .cert-section {
+      padding: 36px 30px 0 30px;
+      max-width: 760px;
+      margin: 0 auto;
     }
-    .column {
-      flex: 1 1 320px;
-      min-width: 260px;
-    }
-    .section-title {
+    .cert-section h3 {
       color: var(--primary);
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.25rem;
       margin-bottom: 12px;
+      text-align: center;
       letter-spacing: 0.5px;
     }
-    .exp-list, .edu-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .exp-list li, .edu-list li {
-      margin-bottom: 18px;
-    }
-    .exp-job, .edu-degree {
-      font-weight: 600;
-      color: #1976d2;
-      margin-bottom: 3px;
-    }
-    .exp-company, .edu-school {
-      color: #555;
-      font-size: 1rem;
-      margin-bottom: 2px;
-    }
-    .exp-date, .edu-date {
-      color: #888;
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-    }
-    .exp-desc {
-      color: #444;
-      font-size: 0.98rem;
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
       margin-bottom: 0;
+      padding: 0;
+      list-style: none;
     }
-    /* CONTACT SECTION */
+    .cert-list li {
+      background: #f3f8fd;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      color: #1976d2;
+      box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cert-list a {
+      color: #1976d2;
+      text-decoration: underline;
+      font-weight: 600;
+    }
     .contact-section {
       text-align: center;
       margin-top: 32px;
@@ -344,22 +388,16 @@
       box-shadow: 0 16px 48px 0 rgba(25, 118, 210, 0.48), 0 2px 16px rgba(25,118,210,0.18);
       transform: scale(1.22) rotate(-3deg);
     }
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .two-columns { flex-direction: column; gap: 0;}
-      .column { margin-bottom: 32px;}
-    }
     @media (max-width: 700px) {
       .container { padding: 0 0 24px 0; }
-      .skills-section, .projects-section { padding: 24px 6px 0 6px; }
+      .skills-section, .projects-section, .about-section, .experience-section, .cert-section { padding: 24px 6px 0 6px; }
       .project-card { flex-direction: column; align-items: flex-start; gap: 14px; padding: 16px 10px;}
       .project-thumb { margin-bottom: 10px;}
-      .two-columns { margin: 32px 6px 0 6px;}
     }
     @media (max-width: 500px) {
       .hero { padding: 30px 4px 22px 4px;}
       .profile-pic-container, .profile-pic-container img { width: 100px; height: 100px;}
-      .skills-section, .projects-section { padding: 12px 2px 0 2px; }
+      .skills-section, .projects-section, .about-section, .experience-section, .cert-section { padding: 12px 2px 0 2px; }
       .contact-icons a { width: 40px; height: 40px; font-size: 1.1rem; padding: 8px 10px;}
     }
   </style>
@@ -373,11 +411,18 @@
       </div>
       <h1>Ahmed Elgohary</h1>
       <h2>Data Engineer</h2>
-      <p>Detail-oriented Data Engineer with hands-on experience in building data pipelines, developing ETL workflows, and integrating data across cloud and on-premise systems. Passionate about enabling analytics through clean, reliable, and scalable data solutions.</p>
+      <p>Transforming data into actionable insights with modern data engineering solutions. Passionate about building scalable data pipelines and delivering business value through analytics.</p>
+    </div>
+    <!-- ABOUT ME SECTION -->
+    <div class="about-section">
+      <h3>About Me</h3>
+      <p>
+        Detail-oriented Data Engineer with hands-on experience in building data pipelines, developing ETL workflows, and integrating data across cloud and on-premise systems. Proficient in Python, SQL, Spark, DBT, and Power BI, with a solid understanding of data modeling, data validation, and data warehousing principles. Familiar with cloud technologies, including Azure, Redshift, and IBM Cloud. Passionate about solving data challenges and enabling analytics through clean, reliable, and scalable data solutions.
+      </p>
     </div>
     <!-- SKILLS SECTION -->
     <div class="skills-section">
-      <h3>Technical Skills & Certifications</h3>
+      <h3>Technical Skills</h3>
       <div class="skills-list">
         <div class="skill-card">
           <i class="fab fa-python"></i>
@@ -397,9 +442,7 @@
         <div class="skill-card">
           <i class="fas fa-cogs"></i>
           <span class="skill-name">
-            <a href="https://www.udemy.com/certificate/UC-f12990ad-8a3f-4416-b642-290b26a189e8/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank">
-              DBT
-            </a>
+            <a href="https://www.udemy.com/certificate/UC-f12990ad-8a3f-4416-b642-290b26a189e8/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank" title="DBT Certificate">DBT</a>
           </span>
           <div class="progress-bar"><div class="progress" style="width:82%; --width:82%;"></div></div>
         </div>
@@ -411,27 +454,21 @@
         <div class="skill-card">
           <i class="fas fa-bolt"></i>
           <span class="skill-name">
-            <a href="https://www.udemy.com/certificate/UC-43ad3d4b-fff1-4fbd-88bd-78a6ec4c585e/" target="_blank">
-              Apache Spark
-            </a>
+            <a href="https://www.udemy.com/certificate/UC-43ad3d4b-fff1-4fbd-88bd-78a6ec4c585e/" target="_blank" title="Apache Spark Certificate">Apache Spark</a>
           </span>
           <div class="progress-bar"><div class="progress" style="width:80%; --width:80%;"></div></div>
         </div>
         <div class="skill-card">
           <i class="fas fa-warehouse"></i>
           <span class="skill-name">
-            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/910da0d38dd05207c9656ed71b564cbd20b8d863" target="_blank">
-              Data Warehousing Concepts
-            </a>
+            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/910da0d38dd05207c9656ed71b564cbd20b8d863" target="_blank" title="Data Warehousing Concepts Certificate">Data Warehousing Concepts</a>
           </span>
           <div class="progress-bar"><div class="progress" style="width:78%; --width:78%;"></div></div>
         </div>
         <div class="skill-card">
           <i class="fas fa-download"></i>
           <span class="skill-name">
-            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8ff55eb05ea23c6078201682069f9516cf435e86" target="_blank">
-              Importing Data in Python
-            </a>
+            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8ff55eb05ea23c6078201682069f9516cf435e86" target="_blank" title="Introduction to Importing Data in Python Certificate">Importing Data in Python</a>
           </span>
           <div class="progress-bar"><div class="progress" style="width:76%; --width:76%;"></div></div>
         </div>
@@ -439,6 +476,33 @@
           <i class="fas fa-chart-bar"></i>
           <span class="skill-name">Power BI</span>
           <div class="progress-bar"><div class="progress" style="width:85%; --width:85%;"></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- EXPERIENCE SECTION -->
+    <div class="experience-section">
+      <h3>Experience</h3>
+      <div class="job">
+        <div class="job-title">Data Engineer</div>
+        <div class="job-company">Arrow Electronics (Nasr-city)</div>
+        <div class="job-date">Jan 2024 – Present</div>
+        <div class="job-desc">
+          Design, implement, and manage data solutions on the Microsoft Azure cloud platform using Python and Spark.<br>
+          Create and maintain data pipelines, data storage solutions, data processing, and data integration using Azure Data Factory, Python.<br>
+          Integrated data from Azure Data Platform (Data Lake, Azure SQL, Data Factory) to optimize BI reporting.<br>
+          Work with functional teams to understand the data requirements and provide data solutions that enable data-driven decision-making.<br>
+          <b>Tools:</b> Oracle, DBT, Spark, Azure Data Factory, Python, Power BI
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-title">Business Intelligence Engineer</div>
+        <div class="job-company">Sandoz Egypt</div>
+        <div class="job-date">Sep 2023 – Jan 2024</div>
+        <div class="job-desc">
+          Developed and created interactive Power BI dashboards to provide insights into business operations.<br>
+          Built and maintained ETL pipelines to consolidate and clean data, ensuring data quality.<br>
+          Provided support and training to users and other teams.<br>
+          <b>Tools:</b> Power BI, Python, Azure SQL Database
         </div>
       </div>
     </div>
@@ -455,49 +519,50 @@
           <a class="project-link" href="https://github.com/a7medgohary/restaurant_data_pipeline" target="_blank">View on GitHub</a>
         </div>
       </div>
+      <div class="project-card">
+        <img class="project-thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=300&q=80" alt="HR Data Pipeline">
+        <div class="project-info">
+          <div class="project-title">HR Data Pipeline</div>
+          <div class="project-desc">
+            Automated HR analytics pipeline to collect, transform, and load performance data from multiple sources into Oracle using Python and DBT, and designed a Power BI dashboard to track employee performance and engagement.
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-thumb" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80" alt="Examination System for ITI">
+        <div class="project-info">
+          <div class="project-title">Examination System for ITI</div>
+          <div class="project-desc">
+            Designed a database to store and manage exam data efficiently and used SSIS to automate data extraction, transformation, and loading into a reporting database and visualization through Power BI.
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- EXPERIENCE & EDUCATION SECTION -->
-    <div class="two-columns">
-      <div class="column">
-        <div class="section-title">Experience</div>
-        <ul class="exp-list">
-          <li>
-            <div class="exp-job">Data Engineer</div>
-            <div class="exp-company">Arrow Electronics, Cairo</div>
-            <div class="exp-date">Jan 2024 – Present</div>
-            <div class="exp-desc">
-              Design, implement, and manage data solutions on Microsoft Azure using Python and Spark. Maintain data pipelines and integration using Azure Data Factory. Collaborate with teams to deliver data-driven solutions.<br>
-              <b>Tools:</b> Oracle, DBT, Spark, Azure Data Factory, Python, Power BI
-            </div>
-          </li>
-          <li>
-            <div class="exp-job">Business Intelligence Engineer</div>
-            <div class="exp-company">Sandoz Egypt</div>
-            <div class="exp-date">Sep 2023 – Jan 2024</div>
-            <div class="exp-desc">
-              Developed interactive Power BI dashboards and ETL pipelines for business operations. Provided user support and training.<br>
-              <b>Tools:</b> Power BI, Python, Azure SQL Database
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="column">
-        <div class="section-title">Education</div>
-        <ul class="edu-list">
-          <li>
-            <div class="edu-degree">Information Technology Institute (ITI)</div>
-            <div class="edu-school">Business Intelligence Development Trainee</div>
-            <div class="edu-date">Jul 2023 – Oct 2023</div>
-            <div class="exp-desc">Focused on ETL, data modeling, warehousing, and Power BI.</div>
-          </li>
-          <li>
-            <div class="edu-degree">B.Sc. in Computer Science</div>
-            <div class="edu-school">Sadat Academy for Management Sciences</div>
-            <div class="edu-date">Sep 2018 – Jun 2022</div>
-            <div class="exp-desc">GPA: 2.8 | Graduation Project: Skin Cancer Detection using Machine Learning (A+)</div>
-          </li>
-        </ul>
-      </div>
+    <!-- CERTIFICATIONS SECTION -->
+    <div class="cert-section">
+      <h3>Certifications</h3>
+      <ul class="cert-list">
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.udemy.com/certificate/UC-f12990ad-8a3f-4416-b642-290b26a189e8/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank">DBT (Data Build Tool)</a>
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.udemy.com/certificate/UC-43ad3d4b-fff1-4fbd-88bd-78a6ec4c585e/" target="_blank">Apache Spark</a>
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          Data Engineering Foundations
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/910da0d38dd05207c9656ed71b564cbd20b8d863" target="_blank">Data Warehousing Concepts</a>
+        </li>
+        <li>
+          <i class="fas fa-certificate"></i>
+          <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8ff55eb05ea23c6078201682069f9516cf435e86" target="_blank">Introduction to Importing Data in Python</a>
+        </li>
+      </ul>
     </div>
     <!-- CONTACT SECTION -->
     <div class="contact-section">
